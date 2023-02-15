@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Anu_ExobeNew</string>
+    <string name="forgot"><u>Forgot password?</u></string>
+    <string name="login">Login</string>
 </resources>

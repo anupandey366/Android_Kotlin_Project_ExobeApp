@@ -6,11 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".Registration">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:text="MASTER Anu's PC"
-        android:textSize="@dimen/_30sdp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
