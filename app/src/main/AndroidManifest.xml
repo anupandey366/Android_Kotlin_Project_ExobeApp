@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Anu_ExobeNew"
         tools:targetApi="31">
         <activity
+            android:name=".Registration"
+            android:exported="false" />
+        <activity
             android:name=".User_Login"
             android:exported="false" />
         <activity
