@@ -1,10 +1,496 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".Registration">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/iv_exobe_red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:src="@drawable/exobe_red"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Register"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_exobe_red"
+            tools:layout_editor_absoluteX="31dp" />
+
+        <TextView
+            android:id="@+id/tv_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="First Name*"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/tv_register"/>
+
+
+        <EditText
+            android:id="@+id/et_firstn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your first name"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:elevation="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            android:inputType="textPersonName|textCapSentences"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:background="@drawable/et_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_firstName"/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_firstn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_lastName"
+            app:layout_constraintTop_toBottomOf="@+id/et_firstn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Last Name*"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/val_firstn"/>
+
+
+        <EditText
+            android:id="@+id/et_lastn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your last name"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:elevation="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            android:inputType="textPersonName|textCapSentences"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:background="@drawable/et_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lastName"/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_lastn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_phoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/et_lastn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Phone Number*"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/val_lastn"/>
+
+        <LinearLayout
+            android:id="@+id/ll_phone1"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:elevation="@dimen/_5sdp"
+            android:background="@drawable/et_bg"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_phoneNumber"
+            >
+            <com.hbb20.CountryCodePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="@dimen/_10sdp"
+                app:ccp_arrowColor="@color/dark_red"
+                android:layout_gravity="center"
+                app:ccp_contentColor="@color/dark_red"
+                app:ccp_showFlag="false"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:background="@color/light_gray"/>
+
+            <EditText
+                android:id="@+id/et_phone1"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:digits="0123456789"
+                android:hint="Enter your phone number"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                android:inputType="number"
+                android:lines="1"
+                android:background="@drawable/et_bg"
+                android:padding="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_phone1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_emailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/ll_phone1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Email*"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/val_phone1"/>
+
+
+        <EditText
+                android:id="@+id/et_email1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email address"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                android:elevation="@dimen/_5sdp"
+                android:inputType="textEmailAddress"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyz@._ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:layout_marginLeft="@dimen/_24sdp"
+                android:layout_marginRight="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/et_bg"
+                app:layout_constraintTop_toBottomOf="@+id/tv_emailAddress"
+                />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_email1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_email1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Password*"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/val_email1"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_pass1"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:elevation="@dimen/_5sdp"
+            android:background="@drawable/et_bg"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_password"
+            >
+
+            <EditText
+                android:id="@+id/et_pass1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="Enter your password"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyz&amp;@#$%^+=ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:longClickable="false"
+                android:inputType="textPassword|textCapSentences"
+                android:lines="1"
+                android:padding="@dimen/_10sdp"/>
+            <ImageView
+                android:id="@+id/iv_visible1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/_10sdp"
+                android:src="@drawable/eye"
+                android:clickable="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_pass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_confirmPassword"
+            app:layout_constraintTop_toBottomOf="@+id/ll_pass1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Confirm Password*"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/val_pass1"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_conpass1"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:elevation="@dimen/_5sdp"
+            android:background="@drawable/et_bg"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_confirmPassword"
+            >
+            <EditText
+                android:id="@+id/et_conpass1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="Confirm password"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyz&amp;@#$%^+=ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:longClickable="false"
+                android:inputType="textPassword|textCapSentences"
+                android:lines="1"
+                android:padding="@dimen/_10sdp" />
+            <ImageView
+                android:id="@+id/iv_convisible1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/_10sdp"
+                android:src="@drawable/eye"
+                android:clickable="true"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_conpass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/ll_terms"
+            app:layout_constraintTop_toBottomOf="@+id/ll_conpass1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/val_conpass1">
+
+            <CheckBox
+                android:id="@+id/cb_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/dark_red"
+                android:fontFamily="@font/poppins"
+                android:text="I agree to "
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@color/dark_red"
+                android:fontFamily="@font/poppins"
+                android:text="@string/terms_and_conditions"
+                android:textColor="#2496FF"
+                android:textSize="@dimen/_10sdp" />
+
+
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_checkBox1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_terms"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <!--<TextView
+            android:visibility="visible"
+            android:id="@+id/val_terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@id/btn_register"
+            app:layout_constraintTop_toBottomOf="@+id/ll_terms"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:background="@drawable/btn_bg"
+            android:text="Register"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/val_checkBox1"
+            tools:layout_editor_absoluteX="24sdp" />
+
+        <TextView
+            android:id="@+id/tv_already"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_register"
+            android:gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="@string/already"
+            android:textSize="@dimen/_10sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+
+

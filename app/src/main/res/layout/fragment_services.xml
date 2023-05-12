@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_Services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/top_menu"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_gravity="center_vertical|right"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Services Available"
+                android:lines="1"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:layout_weight="5"
+                android:gravity="center_horizontal"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/deals_icon"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_gravity="center_vertical|right"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bell"
+                android:layout_gravity="center_vertical|right"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_box"
+            android:gravity="center_vertical"
+            android:hint="Search by category name"
+            android:lines="1"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_12sdp"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/ll_Services"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/et_Search">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

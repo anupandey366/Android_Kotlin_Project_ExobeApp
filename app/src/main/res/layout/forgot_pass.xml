@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ForgotPass">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_arrow_back2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_18sdp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toTopOf="@id/tv_forgPass2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/tv_forgPass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Forgot Password"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/iv_arrow_back2"/>
+        <TextView
+            android:id="@+id/tv_comment1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Please enter your  registered phone number ."
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/tv_forgPass2"/>
+        <TextView
+            android:id="@+id/tv_phone2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:text="Phone Number*"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/tv_comment1"/>
+        <LinearLayout
+            android:id="@+id/ll_phone2"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:elevation="@dimen/_5sdp"
+            android:background="@drawable/et_bg"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone2"
+            >
+            <ImageView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/call"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/light_gray"
+                android:layout_marginLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/et_phone2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="Enter your number"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:lines="1"
+                android:padding="@dimen/_10sdp" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_phone2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/dark_red"
+            android:fontFamily="@font/poppins"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_phone2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:background="@drawable/btn_bg"
+            android:text="Submit"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/ll_phone2"
+            tools:layout_editor_absoluteX="24dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

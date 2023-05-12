@@ -1,5 +1,18 @@
-<resources>
-    <string name="app_name">Anu_ExobeNew</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Exobe</string>
     <string name="forgot"><u>Forgot password?</u></string>
-    <string name="login">Login</string>
-</resources>
+    <string name="register">Don\'t have an account? <font color="#bf1e2e"><u>Register</u></font></string>
+    <string name="already">Already have an account? <font color="#bf1e2e"><u>Login</u></font></string>
+    <string name="terms_conditions">I agree to</string>
+    <string name="resend_otp"><u>Resend OTP</u></string>
+    <string name="comment2">Please enter the 4-digit verification code that was sent to 9936595085. The code is valid for 30 minutes.</string>
+    <string name="explore_text">Explore What \nYour Home Needs</string>
+    <string name="product2_name">Prolite \nHeadphone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur velit at massa vehicula, quis fringilla urna gravida.</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="terms_and_condition">This Agreement constitutes the entire agreement between the Operator and you concerning the subject matter hereof, and they may only be modified by a written amendment signed by an authorized executive of the Operator, or by the posting by the Operator of a revised version. Except to the extent applicable law, if any, provides otherwise, this Agreement, any access to or use of the Site will be governed by the laws of the state of Ontario, Canada, excluding its conflict of law provisions, and the proper venue for any disputes arising out of or relating to any of the same will be the state and federal courts located in Toronto, Ontario. If any part of this Agreement is held invalid or unenforceable, that part will be construed to reflect the parties original intent, and the remaining portions will remain in full force and effect. A waiver by either party of any term or condition of this Agreement or any breach thereof, in any one instance, will not waive such term or condition or any subsequent breach thereof. You may assign your rights under this Agreement to any party that consents to, and agrees to be bound by, its terms and conditions; the Operator may assign its rights under this Agreement without condition. This Agreement will be binding upon and will inure to the benefit of the parties, their successors, and permitted assigns. This Agreement constitutes the entire agreement between the Operator and you concerning the subject matter hereof, and they may only be modified by a written amendment signed by an authorized executive of the Operator, or by the posting by the Operator of a revised version. Except to the extent applicable law, if any, provides otherwise, this Agreement, any access to or use of the Site will be governed by the laws of the state of Ontario, Canada, excluding its conflict of law provisions, and the proper venue for any disputes arising out of or relating to any of the same will be the state and federal courts located in Toronto, Ontario. If any part of this Agreement is held invalid or unenforceable, that part will be construed to reflect the parties original intent, and the remaining portions will remain in full force and effect. A waiver by either party of any term or condition of this Agreement or any breach thereof, in any one instance, will not waive such term or condition or any subsequent breach thereof. You may assign your rights under this Agreement to any party that consents to, and agrees to be bound by, its terms and conditions; the Operator may assign its rights under this Agreement without condition. This Agreement will be binding upon and will inure to the benefit of the parties, their successors, and permitted assigns.</string>
+
+</resources><!--
+<string name="terms_conditions">I agree to<font color="#2496FF">Terms</font></string>-->

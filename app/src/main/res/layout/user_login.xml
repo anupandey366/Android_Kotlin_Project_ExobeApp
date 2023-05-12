@@ -5,64 +5,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".User_Login">
+    tools:context=".UserLogin">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/iv_Logo"
+            android:id="@+id/iv_exobe_red"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginTop="40dp"
             android:src="@drawable/exobe_red"
             app:layout_constraintTop_toTopOf="parent"/>
-
         <TextView
-            android:id="@+id/tv_Login"
+            android:id="@+id/tv_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginLeft="24dp"
             android:layout_marginTop="@dimen/_40sdp"
             android:text="Login"
             android:textSize="@dimen/_16sdp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@+id/iv_Logo"/>
-
+            android:fontFamily="@font/poppins_semi_bold"
+            app:layout_constraintTop_toBottomOf="@+id/iv_exobe_red"/>
         <TextView
-            android:id="@+id/tv_PhoneNumber"
+            android:id="@+id/tv_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="Phone Number*"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
             android:textSize="@dimen/_12sdp"
             android:textColor="@color/dark_gray"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Login"/>
-
+            app:layout_constraintTop_toBottomOf="@+id/tv_login"/>
         <LinearLayout
-            android:id="@+id/ll_PhoneNumber"
+            android:id="@+id/ll_phone"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="3"
             android:elevation="@dimen/_5sdp"
-            android:background="@drawable/edittext_box"
-            android:paddingLeft="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_24sdp"
-            android:layout_marginRight="@dimen/_24sdp"
+            android:background="@drawable/et_bg"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
             android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintTop_toBottomOf="@id/tv_PhoneNumber"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone"
             >
             <ImageView
-                android:layout_weight="0.5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/phone"
-                android:padding="10dp"
+                android:src="@drawable/call"
+                android:layout_gravity="center"
+                android:padding="@dimen/_7sdp"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/light_gray"
+                android:layout_marginLeft="5dp"/>
+
+            <EditText
+                android:id="@+id/et_phone0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="Enter your number"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:lines="1"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_phone0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_phone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <TextView
+            android:id="@+id/tv_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Password*"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@+id/val_phone0"/>
+        <LinearLayout
+            android:id="@+id/ll_pass"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:elevation="@dimen/_5sdp"
+            android:background="@drawable/et_bg"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_pass"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lock"
+                android:padding="@dimen/_7sdp"
                 android:layout_gravity="center"
                 />
             <View
@@ -73,130 +140,123 @@
                 android:layout_marginLeft="5dp"/>
 
             <EditText
-                android:id="@+id/et_LoginPhone"
+                android:id="@+id/et_pass0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/transparent"
-                android:hint="Enter your number"
-                android:textSize="@dimen/_10sdp"
-                android:inputType="number"
-                android:digits="0123456789"
-                android:lines="1"
-                android:paddingLeft="@dimen/_10sdp" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:text="Password*"
-            android:textSize="@dimen/_12sdp"
-            android:textColor="@color/dark_gray"
-            app:layout_constraintTop_toBottomOf="@+id/ll_PhoneNumber"/>
-
-        <LinearLayout
-            android:id="@+id/ll_Password"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3"
-            android:elevation="5dp"
-            android:background="@drawable/edittext_box"
-            android:paddingLeft="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_24sdp"
-            android:layout_marginRight="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintTop_toBottomOf="@id/tv_Password"
-            >
-            <ImageView
-                android:layout_weight="0.5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/phone"
-                android:padding="@dimen/_10sdp"
-                android:layout_gravity="center"
-                />
-            <View
-                android:layout_width="@dimen/_1sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_gravity="center"
-                android:background="@color/light_gray"
-                android:layout_marginLeft="@dimen/_5sdp"/>
-
-            <EditText
-                android:id="@+id/et_Password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
                 android:backgroundTint="@android:color/transparent"
                 android:hint="Enter your password"
                 android:textSize="@dimen/_10sdp"
-                android:inputType="number"
-                android:digits="0123456789"
+                android:fontFamily="@font/poppins"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyz&amp;@#$%^+=ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                 android:longClickable="false"
+                android:inputType="textPassword|textCapSentences"
                 android:lines="1"
-                android:paddingLeft="@dimen/_10sdp" />
-
+                android:paddingLeft="10dp" />
             <ImageView
                 android:id="@+id/iv_visible0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:src="@drawable/password_show"
+                android:paddingRight="@dimen/_15sdp"
+                android:src="@drawable/eye"
                 android:clickable="true"/>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="@dimen/_20sdp"
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_pass0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/dark_red"
             android:layout_marginLeft="@dimen/_24sdp"
-            android:layout_marginRight="@dimen/_24sdp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_pass"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <LinearLayout
+            android:id="@+id/ll_remfor"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
             android:weightSum="2"
-            android:id="@+id/ll_RememberForgot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            app:layout_constraintTop_toBottomOf="@id/ll_Password"
+            app:layout_constraintTop_toBottomOf="@id/ll_pass"
             >
             <CheckBox
                 android:layout_weight="1"
-                android:id="@+id/cb_Remember"
+                android:id="@+id/cb_rem"
                 android:buttonTint="@color/dark_red"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/dark_gray"
                 android:text="Remember me"
+                android:fontFamily="@font/poppins"
                 android:textSize="@dimen/_10sdp"
                 />
             <TextView
                 android:layout_weight="1"
-                android:id="@+id/tv_Forgot"
+                android:id="@+id/tv_forgot"
                 android:gravity="right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/dark_gray"
                 android:text="@string/forgot"
+                android:fontFamily="@font/poppins"
                 android:textSize="@dimen/_10sdp"
                 android:clickable="true"/>
 
         </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_Login"
+<!--
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/val_checkBox"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:text="@string/login"
+            android:layout_height="wrap_content"
             android:textSize="@dimen/_10sdp"
+            android:textColor="@color/dark_red"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ll_remfor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="@dimen/_12sdp"
             android:textStyle="bold"
-            android:textColor="@color/white"
             android:textAllCaps="false"
-            android:background="@drawable/button_background"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_bg"
             android:layout_marginTop="@dimen/_57sdp"
             android:layout_marginLeft="@dimen/_24sdp"
             android:layout_marginRight="@dimen/_24sdp"
-            app:layout_constraintTop_toBottomOf="@id/ll_RememberForgot"/>
-
+            app:layout_constraintTop_toBottomOf="@id/ll_remfor"/>
+        <TextView
+            android:id="@+id/tv_register0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:text="@string/register"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:clickable="true"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.core.widget.NestedScrollView>

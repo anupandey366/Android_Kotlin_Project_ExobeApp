@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FAFAFA"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:cardCornerRadius="7dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/ll_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAFAFA"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/iv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/uni_salon" />
+
+            <TextView
+                android:id="@+id/tv_CategoryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
