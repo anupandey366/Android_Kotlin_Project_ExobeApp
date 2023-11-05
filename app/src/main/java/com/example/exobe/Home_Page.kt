@@ -18,10 +18,9 @@ class Home_Page : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_page)
 
-
-        var goToFrag = intent.getStringExtra("goToFragment").toString()
-        var goToPopular = intent.getStringExtra("goToPopular").toString()
-        var goToServices = intent.getStringExtra("goToServices").toString()
+        val goToFrag = intent.getStringExtra("goToFragment").toString()
+        val goToPopular = intent.getStringExtra("goToPopular").toString()
+        val goToServices = intent.getStringExtra("goToServices").toString()
 
         val homeFragment = HomeFragment()
         val servicesFragment = ServicesFragment()
@@ -39,7 +38,6 @@ class Home_Page : AppCompatActivity() {
             }
             true
         }
-
 
         if (goToFrag=="homeToCategory")
         {//replaceFragment2(homeFragment)
@@ -94,7 +92,6 @@ class Home_Page : AppCompatActivity() {
             transaction.replace(R.id.home_frame,fragment).addToBackStack("n2n")
             transaction.commit()
         }
-
     }
     private fun replaceFragment2(fragment: Fragment) {
         if(fragment != null){

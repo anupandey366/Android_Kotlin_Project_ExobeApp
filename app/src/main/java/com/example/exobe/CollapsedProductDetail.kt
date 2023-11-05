@@ -31,6 +31,8 @@ class CollapsedProductDetail : AppCompatActivity() {
 
         tabs.setupWithViewPager(viewPager)
 
+        /////////////////////////////////////////////
+
         var count = 0
 
         tv_quantity.setText("" + count)
@@ -47,6 +49,7 @@ class CollapsedProductDetail : AppCompatActivity() {
             }
         }
 
+        ////////////////////////////////////////////////////
 
         var isShow = true
         var scrollRange = -1

@@ -2,7 +2,6 @@ package com.example.exobe
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +9,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
-import kotlinx.android.synthetic.main.fragment_home.view.*
+import kotlinx.android.synthetic.main.fragment_home.view.image_slider
+import kotlinx.android.synthetic.main.fragment_home.view.iv_chair
+import kotlinx.android.synthetic.main.fragment_home.view.iv_headphone
+import kotlinx.android.synthetic.main.fragment_home.view.iv_mobile
+import kotlinx.android.synthetic.main.fragment_home.view.iv_sofa
+import kotlinx.android.synthetic.main.fragment_home.view.recyclerViewCategory
+import kotlinx.android.synthetic.main.fragment_home.view.recyclerViewServices
+import kotlinx.android.synthetic.main.fragment_home.view.tv_seeAllCategories
+import kotlinx.android.synthetic.main.fragment_home.view.tv_seeAllPopular
+import kotlinx.android.synthetic.main.fragment_home.view.tv_seeAllServices
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class HomeFragment : Fragment(), ProductViewClick {
+class HomeFragment : androidx.fragment.app.Fragment(), ProductViewClick {
 
     lateinit var image_slider: ImageSlider
     var sliderList: ArrayList<SlideModel> = ArrayList()
@@ -67,6 +75,7 @@ class HomeFragment : Fragment(), ProductViewClick {
             startActivity(intent)
         }
 
+        /////////////////////////////////////////////////////////////
 
         sliderList.clear()
 

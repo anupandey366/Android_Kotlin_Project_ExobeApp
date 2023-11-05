@@ -145,8 +145,9 @@ class UserLogin : AppCompatActivity()  {
             flagGo++
         }
     }
-    public fun validations()
-    {flagGo=0
+    fun validations()
+    {
+        flagGo=0
         validatePhone()
         validatePassword()
         //agreement()
